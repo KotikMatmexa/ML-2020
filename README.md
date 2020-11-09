@@ -15,3 +15,5 @@ https://github.com/CorentinJ/Real-Time-Voice-Cloning/blob/master/demo_toolbox_co
 Примеры от авторов статьи\
 https://google.github.io/tacotron/publications/speaker_adaptation/
 
+Предобученные модели используемые для тестов
+https://drive.google.com/file/d/1n1sPXvT34yXFLT47QZA6FIRGrwMeSsZc/view
