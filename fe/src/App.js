@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 
@@ -70,13 +69,15 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="recording">
-                <input ref={this.data} />
-                <button onClick={this.send}>Send query</button>
-                <button onClick={this.record}>Record audio</button>
-                <button ref={this.stopButton}>Stop recording</button>
-                <h2>{this.state.data}</h2>
-            </div>
+
+                <div className="recording">
+                    <textarea placeholder="Give me some text here..." ref={this.data} />
+                    <button onClick={this.send}>Send query</button>
+                    <button onClick={this.record}>Record audio</button>
+                    <button ref={this.stopButton}>Stop recording</button>
+                    <h2>{this.state.data}</h2>
+                    <audio controls={true} src="./audio.wav"/>
+                </div>
         );
     }
 }

@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.recording{
+  position: relative;
+  margin: 10% auto;
+  width: 200px;
+  text-align: center;
+}
+.recording textarea{
+  width: 195px;
+  resize: none;
+  height: 50px;
+}
+.recording button{
+  width: 200px;
+}

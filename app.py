@@ -24,9 +24,10 @@ def result():
 def voice_result():
     if request.method == 'POST':
         file = request.files["voice"]
-        with open("audio.wav", "wb") as aud:
+        with open("../public/audio.wav", "wb") as aud:
             aud_stream = file.read()
             aud.write(aud_stream)
+            aud.close()
         if file:
             data = "Successfully recorded!"
             return json.dumps(data)
