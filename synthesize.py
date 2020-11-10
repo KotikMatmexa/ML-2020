@@ -35,8 +35,8 @@ class VoiceGen:
         return generated_wav, synthesizer.sample_rate
 
 
-if __name__ == "__main__":
-    generator = VoiceGen()
-    embeding = generator.encode()
-    result, samplerate = generator.generate("I feel fantastic hey hey hey", embeding)
-    sf.write("result.wav", result, samplerate)
+#if __name__ == "__main__":
+   # generator = VoiceGen()
+    #embeding = generator.encode()
+    #result, samplerate = generator.generate("I feel fantastic hey hey hey", embeding)
+    #sf.write("result.wav", result, samplerate)
