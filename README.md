@@ -17,3 +17,8 @@ https://google.github.io/tacotron/publications/speaker_adaptation/
 
 Предобученные модели используемые для тестов (скачать, закинуть в основную папку)\
 https://drive.google.com/file/d/1n1sPXvT34yXFLT47QZA6FIRGrwMeSsZc/view
+
+
+For run on CPU you need TenserFlow=1.15 version. 
+This version supported by python3.x.x-python3.7.x version. 
+(DON'T USE 3.8+ verssions)
