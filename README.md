@@ -22,3 +22,26 @@ https://drive.google.com/file/d/1n1sPXvT34yXFLT47QZA6FIRGrwMeSsZc/view
 For run on CPU you need TenserFlow=1.15 version. 
 This version supported by python3.x.x-python3.7.x version. 
 (DON'T USE 3.8+ verssions)
+
+Quick Start:
+1. clone repo
+2. download model https://drive.google.com/file/d/1n1sPXvT34yXFLT47QZA6FIRGrwMeSsZc/view
+3. extract this to project dir
+4. Build docker image
+```
+docker build --tag voice:latest .
+```
+5. Run docker image
+```
+docker run <container_id>
+```
+HELP ZONE:
+You can find container_id by run following command
+```
+docker images -a
+```
+if you want to kill image use following command
+```
+docker rm <container_id>
+```
+
