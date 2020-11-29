@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - APP_ENV=dev
+    ports:
+      - "5000:5000"
+    volumes:
+     - .:/code  
+  frontend:
+    build:
+      context: .
+      dockerfile: front.Dockerfile
+    environment:
+      - APP_ENV=dev
+      - APP_BACKEND_URL=backend:5000
+      - APP_FRONTEND_PORT=3000
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
