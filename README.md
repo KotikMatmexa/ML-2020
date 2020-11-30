@@ -3,13 +3,8 @@
 Quick Start:
 
 1. Clone repo
-2. Download models
-```
-https://drive.google.com/file/d/1n1sPXvT34yXFLT47QZA6FIRGrwMeSsZc/view
-```
-3. Extract this to project dir
 
-4. Run docker
+2. Run docker
 ```
 docker-compose up --build
 ```
