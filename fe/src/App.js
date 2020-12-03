@@ -13,7 +13,8 @@ class App extends React.Component {
     }
 
     sendVoice = form => {
-        fetch("http://localhost:5000/record", {
+        const url = "http://0.0.0.0:5000/record";
+        fetch(url, {
             method: "POST",
             body: form,
             contentType: "multipart/form-data"
@@ -29,7 +30,8 @@ class App extends React.Component {
             return false;
         }
         this.setState({ data: "Sending data..." });
-        fetch(`http://localhost:5000/result?query=${this._data.value}`, {
+        const url = "http://0.0.0.0:5000/result?query="+this._data.value;
+        fetch(url, {
             method: "GET",
             headers: { "Content-Type": "application/json" }
         })

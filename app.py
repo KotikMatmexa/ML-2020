@@ -6,9 +6,10 @@ from synthesize import VoiceGen
 
 app = Flask(__name__)
 
+port = 'http://0.0.0.0:3000'
 
 @app.route('/result', methods=['GET', 'POST'])
-@cross_origin(origin='http://localhost:3000', headers=['Content- Type', 'application/json'])
+@cross_origin(origin=port, headers=['Content- Type', 'application/json'])
 def result():
     if request.method == 'GET':
         query = request.args.get('query', None) #text
@@ -20,7 +21,7 @@ def result():
 
 
 @app.route('/record', methods=['POST'])
-@cross_origin(origin='http://localhost:3000', headers=['Content- Type', 'multipart/form-data'])
+@cross_origin(origin=port, headers=['Content- Type', 'multipart/form-data'])
 def voice_result():
     if request.method == 'POST':
         file = request.files["voice"]
