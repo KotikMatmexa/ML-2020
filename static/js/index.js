@@ -1,4 +1,25 @@
 
+const isRecordered = () => {
+      let recordingField = document.getElementsByClassName("recording-field")[0];
+      let recordingSuccess = document.getElementsByClassName("recording-success")[0];
+      fetch("http://127.0.0.1:5000/static/recordings/recording.wav"
+        ).then(data =>{
+        if(data.status == 200){
+            recordingField.style.display = 'none'
+            recordingSuccess.style.display = 'block'
+            }
+        else{
+          recordingField.style.display = ''
+          recordingSuccess.style.display = ''
+          }
+         }
+          )
+        .catch(e =>
+            console.log(e)
+        )
+
+}
+
  const sendQuery = () => {
 
         const data = document.getElementById("data-textarea").value;

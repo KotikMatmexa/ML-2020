@@ -32,7 +32,8 @@ def result():
         query = request.args.get('query', None)
         if query:
             data = "We got your query:" + query
-            finish_work(query)
+            if embedding:
+                finish_work(query)
             return json.dumps(data)
         return "No place information is given"
 

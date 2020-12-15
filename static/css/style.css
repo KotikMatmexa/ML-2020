@@ -20,11 +20,15 @@ text-decoration-line: underline;
 .form-floating{
     width: 90%;
     }
-.recording-field {
+.recording-field, .recording-success {
   position: relative;
   margin: 2% auto;
   width: 60%;
   text-align: center;
+}
+
+.recording-success{
+    display: none;
 }
 
 .recording-result{

@@ -14,7 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <title>Ex</title>
   </head>
-  <body>
+  <body onload="isRecordered()">
     <div id="gradient">
       <div class="header">
         <img
@@ -43,9 +43,13 @@
         <button onClick="record()" class="btn btn-success">Record</button>
         <button id="stop-recording-button" class="btn btn-danger">Stop</button>
         <h6 id="data-recording-result"></h6>
-        <audio
+      </div>
+       <div class="recording-success">
+        <h3>Your voice has been recorded:</h3>
+           <audio
           controls="{true}"
           src="{{ url_for('static', filename= 'recordings/recording.wav') }}"
+        />
         />
       </div>
       <div class="recording-result">
