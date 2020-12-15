@@ -1,0 +1,47 @@
+.header{
+    text-align: center;
+}
+h3{
+text-decoration-line: underline;
+}
+.logo{
+    width: 45%;
+    height: 25%;
+    border:1px;
+    border-radius:25px;
+}
+.query-field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 23px;
+}
+
+.form-floating{
+    width: 90%;
+    }
+.recording-field {
+  position: relative;
+  margin: 2% auto;
+  width: 60%;
+  text-align: center;
+}
+
+.recording-result{
+    text-align: center;
+}
+
+
+  body{
+   background-color: #000000;
+   padding: 0px;
+   margin: 0px;
+ }
+
+#gradient
+{
+  width: 100%;
+  height: 800px;
+  padding: 0px;
+  margin: 0px;
+}

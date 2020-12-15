@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/style.css') }}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Ex</title>
+  </head>
+  <body>
+    <div id="gradient">
+      <div class="header">
+        <img
+          src="{{ url_for('static', filename= 'logo.webp') }}"
+          alt=""
+          class="logo"
+        />
+      </div>
+      <div class="query-field">
+        <h3>Write the sentence you want to be played:</h3>
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            placeholder="Give me some text here..."
+            id="data-textarea"
+            style="height: 100px"
+          ></textarea>
+          <label for="data-textarea">Your query</label>
+        </div>
+        <h2 id="data-query-result"></h2>
+        <button onClick="sendQuery()" class="btn btn-dark">Send query</button>
+      </div>
+
+      <div class="recording-field">
+        <h3>Do you want to record your voice?</h3>
+        <button onClick="record()" class="btn btn-success">Record</button>
+        <button id="stop-recording-button" class="btn btn-danger">Stop</button>
+        <h6 id="data-recording-result"></h6>
+        <audio
+          controls="{true}"
+          src="{{ url_for('static', filename= 'recordings/recording.wav') }}"
+        />
+      </div>
+      <div class="recording-result">
+        <h3>Listen and enjoy!</h3>
+        <audio
+          controls="{true}"
+          src="{{ url_for('static', filename= 'recordings/result.wav') }}"
+        />
+      </div>
+    </div>
+  </body>
+  <script src="{{ url_for('static', filename= 'js/index.js') }}">
+    rel="script">
+  </script>
+</html>
