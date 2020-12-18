@@ -24,8 +24,6 @@ def voice_result():
         return "Bad request..."
 
 
-
-
 @app.route('/result', methods=['GET'])
 def result():
     if request.method == 'GET':
@@ -42,10 +40,12 @@ def result():
 def render():
     return render_template('index.html')
 
+
 def finish_work(str):
     result, samplerate = generator.generate(str, embedding)
     sf.write("static/recordings/result.wav", result, samplerate)
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", debug=True)
+    # app.run(host="0.0.0.0", debug=True)
+    app.run(ssl_context='adhoc', host="0.0.0.0", debug=True, port=5000)
