@@ -30,8 +30,8 @@ RUN apt-get update \
 COPY . /code/
 
 # load models from google drive
-RUN chmod +x get_model.sh
-RUN ./get_model.sh
+# RUN chmod +x get_model.sh
+# RUN ./get_model.sh
 
 # run app
-CMD ["python", "app.py"]
+CMD python app.py
