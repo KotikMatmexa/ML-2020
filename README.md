@@ -18,6 +18,10 @@ For down container use:
 docker-compose down
 ```
 
+#### Пояснения frontend  
+главная страница - в папке templates    
+css, js, recordings - в папке static
+
 Ссылка на статью\
 https://arxiv.org/abs/1806.04558\
 
